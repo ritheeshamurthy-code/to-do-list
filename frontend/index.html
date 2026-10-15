@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header class="header">
+            <div>
+                <p class="eyebrow">STAY ORGANIZED</p>
+                <h1>My To-Do List</h1>
+                <p class="subtitle">Small steps, big progress.</p>
+            </div>
+            <div class="task-icon">✓</div>
+        </header>
+
+        <section class="task-card">
+            <form id="task-form">
+                <label for="task-title">What needs to get done?</label>
+                <div class="input-group">
+                    <input
+                        type="text"
+                        id="task-title"
+                        placeholder="Enter a new task..."
+                        maxlength="200"
+                        required
+                    >
+                    <button type="submit" id="add-button">+ Add Task</button>
+                </div>
+            </form>
+
+            <div class="task-summary">
+                <span id="task-count">0 tasks</span>
+                <span id="completed-count">0 completed</span>
+            </div>
+
+            <div class="progress-track">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+
+            <div id="message" role="status" aria-live="polite"></div>
+
+            <ul id="task-list" aria-label="Your tasks"></ul>
+
+            <div id="empty-state" class="empty-state">
+                <div class="empty-icon">📝</div>
+                <h2>No tasks yet!</h2>
+                <p>Add your first task to get started.</p>
+            </div>
+
+            <button id="refresh-button" class="refresh-button" type="button">
+                ↻ Refresh tasks
+            </button>
+        </section>
+
+        <footer>
+            Made for a more productive day.
+        </footer>
+    </main>
+</body>
+</html>
